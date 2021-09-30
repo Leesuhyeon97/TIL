@@ -53,6 +53,14 @@ public class Test {
 
 ```
 
+---
+
+## 생성자
+
+> 객체 생성에 관여( non - static member 초기화)하는 특별한 메소드
+
+---
+
 ## Modifirer (지정자)
 
 ### 접근지정자
@@ -181,8 +189,29 @@ public class C extends A {
 
 > 어디서든 접근 가능
 
-
+---
 
 ### 사용지정자 
 
-abstract, static, final
+#### static
+
+> 객체 생성 없이 사용
+
+* class : inner class에서만 사용가능
+* data : 공유하는 변수가 됨
+* method : 공유하는 메소드가 됨 (안써도 이슈가 없음)
+
+#### final
+
+> 변경없이 사용
+
+* class : 상속불가
+* data : 상수 ex) Math.PI
+* method : override 불가 
+
+#### abstract
+
+> 상속으로만 사용
+
+
+
