@@ -129,7 +129,7 @@ public class Member {
 	private int age;
 	
 	public Member() {
-		super(); // 모든 생성자는 자동으로 super가 생성됨, 명시적으로 표현하면 무조건 첫                     번째 줄에 적어야함 다른 줄에 넣으면 에러발생
+		super(); // 모든 생성자는 자동으로 super가 생성됨, 명시적으로 표현하면 무조건 첫 번째 줄에 적어야함 다른 줄에 넣으면 에러발생
 	}
 	
 	public Member (String name,String address,String phone,int age) {
