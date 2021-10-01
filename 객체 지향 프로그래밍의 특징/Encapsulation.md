@@ -63,7 +63,7 @@ public class Test {
 
 ## Modifirer (지정자)
 
-### 접근지정자
+### Access Modifier (접근지정자)
 
 * private < default < protected < public
 
@@ -191,7 +191,7 @@ public class C extends A {
 
 ---
 
-### 사용지정자 
+### Usage Modifier (사용지정자 )
 
 #### static
 
@@ -211,7 +211,81 @@ public class C extends A {
 
 #### abstract
 
-> 상속으로만 사용
+> 상속으로만 사용. 추상적.
+>
+> data는 없음.
+
+* class : 객체 생성 불가,  상속으로만 사용 강제
+* method : override 강제  
+
+- abstract에서 `();`는 호출이 아니라 `선언`
+
+* interface = 다중상속 : implement 
+
+```java
+package test1.abstract_;
+
+public abstract class Animal {
+	public abstract void eat();
+}
+```
+
+```java
+package test1.abstract_;
+
+public class Human extends Animal {
+
+	@Override
+	public void eat() {
+		System.out.println("밥을 먹고 산다");
+	}
+	public void walk() {
+		System.out.println("직립보행");
+	}
+}
+```
+
+```java
+package test1.abstract_;
+
+public class Superman extends Human implements Flyer {
+	@Override
+	public void eat() {
+		super.eat();
+		System.out.println("빵을 먹고 산다");
+	}
+	public void fly() {
+		System.out.println("하늘을 날아다님");
+	}
+}
+```
+
+```java
+package test1.abstract_;
+
+public class Test {
+
+	public static void main(String[] args) {
+		Superman s = new Superman();
+		
+		s.eat();
+		s.fly();
+		s.walk();
+	}
+}
+```
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
